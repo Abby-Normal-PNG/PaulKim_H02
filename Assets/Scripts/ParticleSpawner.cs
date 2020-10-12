@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class ParticleSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject[] _particlePrefabs;
+    [HideInInspector] public int _currentParticleIndex = 0;
+
+    public void SpawnCurrentParticle()
     {
-        
+        SpawnParticleIndex(_currentParticleIndex);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SpawnRandomParticle()
     {
-        
+        int randIndex = Random.Range(0, _particlePrefabs.Length);
+        _currentParticleIndex = randIndex;
+        SpawnParticleIndex(_currentParticleIndex);
+    }
+
+    private void SpawnParticleIndex(int i)
+    {
+        if(_particlePrefabs[i] != null)
+        {
+            Instantiate(_particlePrefabs[i], gameObject.transform.position, gameObject.transform.rotation);
+        }
     }
 }
