@@ -8,7 +8,7 @@ public enum Slot { Head, Earlobe, Chest, RightHand, LeftHand, Pelvis, Shins, Fee
 public class Equipment : ScriptableObject
 {
     public Rarity rarity;
-    public string itemName = "Name";
+    public string itemName = "";
     public Slot slot;
     public int value = 1;
 }
