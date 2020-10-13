@@ -10,8 +10,12 @@ public class ParticleSpawnEditor : Editor
 
         ParticleSpawner spawn = (ParticleSpawner)target;
 
-        GUILayout.Label("Current Particle Index");
+        EditorGUILayout.HelpBox("Spawns particle effects at the GameObject's current position." +
+            " Can spawn either random particles or the particle specified by the slider.", MessageType.Info);
+
+        //GUILayout.Label("Current Particle Index");
         spawn._currentParticleIndex = EditorGUILayout.IntSlider(spawn._currentParticleIndex, 0, spawn._particlePrefabs.Length - 1);
+        GUILayout.Label("Current Particle: " + spawn._particlePrefabs[spawn._currentParticleIndex].name);
 
         GUILayout.BeginHorizontal();
 

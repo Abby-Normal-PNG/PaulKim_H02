@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentlyEquipped:
   - {fileID: 11400000, guid: f7385a33a5c471e4b862d1ad44f1d6b2, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: bcd3912d6b148894388e6f74e89fbecb, type: 2}
 --- !u!4 &144482396
 Transform:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 352304b7fbe11f445970df6ae36e6227, type: 3}
   - {fileID: 100004, guid: 3af6f68141914ca43ba39b2403757bd0, type: 3}
   - {fileID: 1687118924408352, guid: 77c69ec12208c4c4380d15e30b6f8f68, type: 3}
-  _currentParticleIndex: 1
+  _currentParticleIndex: 0
 --- !u!4 &693033035
 Transform:
   m_ObjectHideFlags: 0

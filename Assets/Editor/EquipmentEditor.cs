@@ -27,10 +27,15 @@ public class EquipmentEditor : Editor
             GUILayout.EndVertical();
 
             GUILayout.BeginVertical();
-                GUILayout.Label("Name");
+                GUILayout.Label("Value");
                 equip.value = EditorGUILayout.IntField(equip.value);
             GUILayout.EndVertical();
 
         GUILayout.EndHorizontal();
+
+        EditorGUILayout.HelpBox("Rarity: Classifies what quality the equipment is." +
+            " Name: The equipment's name." +
+            " Slot: Where this equipment can be placed." +
+            " Value: How much an item is worth or how much attack/defense it gives.", MessageType.Info);
     }
 }
